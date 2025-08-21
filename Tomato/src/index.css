@@ -53,7 +53,7 @@
 }
 
 .navbar button:hover {
-  background-color: #fff4f2;
+  background-color:tomato;
 }
 
 .navbar .active {
@@ -97,6 +97,7 @@
   max-width: 50%;
   bottom: 10%;
   left: 6vw;
+  animation: fadeIn 3s;
 }
 .header-contents h2{
   font-weight: 500;
@@ -116,5 +117,19 @@
   border: none;
   border-radius: 50px;
   font-size:max(1vw,13px);
+  transition: 0.3s;
+}
+
+.header-contents button:hover{
+  background-color: #ffd102;
+}
+
+@keyframes fadeIn{
+  0% {
+    opacity: 0;
+  }
+  100%{
+    opacity:1;
+  }
 }
 
