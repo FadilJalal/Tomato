@@ -37,6 +37,6 @@ const NavBar = () => {
     )
 }
 
-export default NavBar;//Export default App
+export default NavBar;
 
 
