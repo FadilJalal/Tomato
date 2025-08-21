@@ -53,7 +53,7 @@
 }
 
 .navbar button:hover {
-  background-color:tomato;
+  background-color: tomato;
 }
 
 .navbar .active {
@@ -71,7 +71,6 @@
   height: auto;
 }
 
-
 .navbar-search-icon .dot {
   position: absolute;
   width: 10px;
@@ -81,17 +80,19 @@
   top: -5px;
   right: -5px;
 }
-.header{
+
+.header {
   height: 34vw;
   margin: 30px auto;
   background: url('header_img.png');
   background-size: contain;
   position: relative;
 }
-.header-contents{
+
+.header-contents {
   position: absolute;
   display: flex;
-  flex-direction:column;
+  flex-direction: column;
   align-items: start;
   gap: 1.5vw;
   max-width: 50%;
@@ -99,37 +100,93 @@
   left: 6vw;
   animation: fadeIn 3s;
 }
-.header-contents h2{
+
+.header-contents h2 {
   font-weight: 500;
   color: white;
-  font-size: max(4.5vw,22px);  
+  font-size: max(4.5vw, 22px);
 }
-.header-contents p{
+
+.header-contents p {
   color: white;
   font-size: 1vw;
 }
-.header-contents button{
+
+.header-contents button {
   cursor: pointer;
   color: #747474;
   font-weight: 500;
   padding: 1vw 2.3vw;
-  background:white;
+  background: white;
   border: none;
   border-radius: 50px;
-  font-size:max(1vw,13px);
+  font-size: max(1vw, 13px);
   transition: 0.3s;
 }
 
-.header-contents button:hover{
+.header-contents button:hover {
   background-color: #ffd102;
 }
 
-@keyframes fadeIn{
+@keyframes fadeIn {
   0% {
     opacity: 0;
   }
-  100%{
-    opacity:1;
+
+  100% {
+    opacity: 1;
   }
 }
 
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.menu h1 {
+  color: #262626;
+  font-weight: 500;
+}
+
+.menu-text {
+  font-weight: 500;
+  max-width: 60%;
+  color: #808080;
+  /* fixed */
+}
+
+.menu-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 30px;
+  align-items: center;
+  margin: 20px 0px;
+  overflow-x: scroll;
+}
+
+.menu-list::-webkit-scrollbar {
+  display: none;
+}
+
+.menu-list-item img {
+  width: 7.5vw;
+  min-width: 80px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: 0.2s;
+}
+
+.menu-item-list p {
+  margin-top: 10px;
+  font-size: max(1);
+  color: #747474;
+  cursor: pointer;
+}
+
+.menu hr {
+  margin: 10px;
+  height: 2px;
+  background-color: #e2e2e2;
+}
