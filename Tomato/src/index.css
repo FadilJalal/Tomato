@@ -283,6 +283,36 @@
   font-size: 16px;
 }
 
+.food-item-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.food-item-add-btn {
+  background: #16a34a;
+  color: #ffffff;
+  border: none;
+  border-radius: 9999px;
+  padding: 8px 14px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.food-item-add-btn:hover {
+  background: #15803d;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+.food-item-add-btn:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;

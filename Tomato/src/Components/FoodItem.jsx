@@ -1,4 +1,3 @@
-
 import { assets } from '../assets/frontend_assets/assets'
 
 const FoodItem = ({ id, name, price, description, image }) => {
@@ -11,7 +10,10 @@ const FoodItem = ({ id, name, price, description, image }) => {
           <img className='food-item-stars' src={assets.rating_starts} alt="rating" />
         </div>
         <p className='food-item-desc'>{description}</p>
-        <p className='food-item-price'>${price}</p>
+        <div className='food-item-footer'>
+          <p className='food-item-price'>${price}</p>
+          <button className='food-item-add-btn' aria-label={`Add ${name}`}>Add</button>
+        </div>
       </div>
     </div>
   )
