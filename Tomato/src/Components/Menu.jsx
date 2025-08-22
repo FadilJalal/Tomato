@@ -15,7 +15,7 @@ const Menu = ({ menulist, setMenuList }) => {
       <div className='menu-list'>
         {menu_list.map((item, index) => (
           <div 
-            onClick={() => setMenuList(item.menu_name)} 
+            onClick={() => setMenuList(menulist === item.menu_name ? '' : item.menu_name)} 
             key={index} 
             className="menu-list-item"
           >
