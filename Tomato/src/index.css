@@ -132,7 +132,6 @@
   0% {
     opacity: 0;
   }
-
   100% {
     opacity: 1;
   }
@@ -153,7 +152,6 @@
   font-weight: 500;
   max-width: 60%;
   color: #808080;
-  /* fixed */
 }
 
 .menu-list {
@@ -170,17 +168,31 @@
   display: none;
 }
 
+.menu-list-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
 .menu-list-item img {
   width: 7.5vw;
   min-width: 80px;
   cursor: pointer;
   border-radius: 50%;
   transition: 0.2s;
+  border: 3px solid transparent;
 }
 
-.menu-item-list p {
+.menu-list-item img.active {
+  padding: 2px;
+  border: 3px solid tomato;
+}
+
+.menu-list-item p {
   margin-top: 10px;
-  font-size: max(1);
+  font-size: max(1vw, 14px);
   color: #747474;
   cursor: pointer;
 }

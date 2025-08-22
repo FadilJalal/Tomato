@@ -1,12 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Header from '../Components/Header'
 import Menu from '../Components/Menu'
 
 const Home = () => {
+  const [menulist,setMenuList] = useState('');
   return (
     <div>
       <Header/>
-      <Menu/>
+      <Menu menulist={menulist} setMenuList={setMenuList}/>
       
     </div>
   )
