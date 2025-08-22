@@ -1,13 +1,10 @@
-import React, { useState } from 'react'
+
 import { assets } from '../assets/frontend_assets/assets'
 
 const FoodItem = ({ id, name, price, description, image }) => {
-    const [itemcount,setItemCound] = useState(0);
   return (
     <div className='food-item'>
       <img className='food-item-image' src={image} alt={name} />
-      {!itemcount
-      }
       <div className='food-item-info'>
         <div className='food-item-rating'>
           <p className='food-item-name'>{name}</p>
