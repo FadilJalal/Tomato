@@ -16,6 +16,6 @@ const FoodDisplay = ({ menulist }) => {
             </div>
         </div>
     )
-}
+}   
 
 export default FoodDisplay
