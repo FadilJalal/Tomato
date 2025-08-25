@@ -170,7 +170,7 @@
   color: #1a1a1a;
   font-weight: 700;
   font-size: max(2.5vw, 28px);
-  text-align: center;
+  text-align: left;   /* aligned left */
   margin-bottom: 10px;
 }
 
@@ -178,12 +178,13 @@
   font-weight: 500;
   max-width: 60%;
   color: #808080;
+  text-align: left;   /* aligned left */
 }
 
 .menu-list {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start; /* align items to start */
   gap: 30px;
   align-items: center;
   margin: 20px 0px;
@@ -228,6 +229,7 @@
   height: 2px;
   background-color: #e2e2e2;
 }
+
 
 .food-display {
   display: flex;
@@ -397,67 +399,6 @@
     transform: translateY(0);
   }
 }
-
-/* Quantity Selector Styling */
-.quantity-selector {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  min-height: 90px;
-  padding: 10px 0;
-}
-
-.quantity-selector button {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  border: none;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 18px;
-  font-weight: bold;
-  transition: all 0.2s ease;
-}
-
-.quantity-selector .minus-btn {
-  background: #ff4444;
-  color: white;
-}
-
-.quantity-selector .plus-btn {
-  background: #44aa44;
-  color: white;
-}
-
-.quantity-selector .minus-btn:hover {
-  background: #ff2222;
-  transform: scale(1.1);
-}
-
-.quantity-selector .plus-btn:hover {
-  background: #22aa22;
-  transform: scale(1.1);
-}
-
-.quantity-selector .quantity {
-  font-size: 20px;
-  font-weight: bold;
-  color: #333;
-  min-width: 30px;
-  text-align: center;
-  padding: 5px 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 32px;
-  line-height: 1;
-  margin: 2px 0;
-}
-
 .food-item{
   position: relative;
 }

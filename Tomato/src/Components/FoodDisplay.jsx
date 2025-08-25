@@ -18,4 +18,4 @@ const FoodDisplay = ({ menulist }) => {
     )
 }   
 
-export default FoodDisplay
+export default FoodDisplay;
