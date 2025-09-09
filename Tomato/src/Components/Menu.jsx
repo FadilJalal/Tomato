@@ -34,4 +34,4 @@ const Menu = ({ menulist, setMenuList }) => {
   )
 }
 
-export default Menu
+export default Menu;
