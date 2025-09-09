@@ -1,8 +1,12 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import { assets } from "../assets/frontend_assets/assets";
+import { StoreContext } from "../Context/StoreContext";
 
 const FoodList = ({ id, name, price, description, image }) => {
-  const [itemCount, setItemCount] = useState(0);
+  const { cartList, addToCart, removeFromCart } = useContext(StoreContext);
+
+  // Get the current quantity of this item in the cart
+  const itemCount = cartList.find(item => item.id === id)?.quantity || 0;
 
   return (
     <div className="food-list">
@@ -13,20 +17,20 @@ const FoodList = ({ id, name, price, description, image }) => {
         {itemCount === 0 ? (
           <img
             className="add"
-            onClick={() => setItemCount((prev) => prev + 1)}
+            onClick={() => addToCart({ id, name, price, description, image })}
             src={assets.add_icon_white}
             alt="Add Item"
           />
         ) : (
           <div className="food-list-counter">
             <img
-              onClick={() => setItemCount((prev) => Math.max(prev - 1, 0))}
+              onClick={() => removeFromCart(id)}
               src={assets.remove_icon_red}
               alt="Remove Item"
             />
             <p>{itemCount}</p>
             <img
-              onClick={() => setItemCount((prev) => prev + 1)}
+              onClick={() => addToCart({ id, name, price, description, image })}
               src={assets.add_icon_green}
               alt="Add Item"
             />
@@ -52,4 +56,3 @@ const FoodList = ({ id, name, price, description, image }) => {
 };
 
 export default FoodList;
-    
