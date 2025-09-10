@@ -1,10 +1,8 @@
 import { create } from 'zustand';
-import { food_list } from '../assets/frontend_assets/assets';
 
 const useStore = create((set, get) => ({
-  // State
+  // State - Only cart-related state
   cartList: [],
-  food_list: food_list,
 
   // Actions
   addToCart: (item) => {
@@ -58,3 +56,4 @@ const useStore = create((set, get) => ({
 }));
 
 export default useStore;
+
