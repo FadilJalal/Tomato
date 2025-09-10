@@ -1,12 +1,13 @@
-import React, { useContext } from "react";
+import React from "react";
 import { assets } from "../assets/frontend_assets/assets";
-import { StoreContext } from "../Context/StoreContext";
+import useStore from "../store/useStore";
 
 const FoodList = ({ id, name, price, description, image }) => {
-  const { cartList, addToCart, removeFromCart } = useContext(StoreContext);
-
-  // Get the current quantity of this item in the cart
-  const itemCount = cartList.find(item => item.id === id)?.quantity || 0;
+  const { cartList, addToCart, removeFromCart } = useStore();
+  
+  // Find the current item in cart to get its quantity
+  const cartItem = cartList.find(item => item.id === id);
+  const itemCount = cartItem ? cartItem.quantity : 0;
 
   return (
     <div className="food-list">
@@ -14,25 +15,25 @@ const FoodList = ({ id, name, price, description, image }) => {
       <div className="food-list-image-container">
         <img className="food-list-image" src={image} alt={name} />
 
-        {itemCount === 0 ? (
+        {!itemCount ? (
           <img
+            src={assets.add_icon_white}
+            alt="Add"
             className="add"
             onClick={() => addToCart({ id, name, price, description, image })}
-            src={assets.add_icon_white}
-            alt="Add Item"
           />
         ) : (
           <div className="food-list-counter">
             <img
-              onClick={() => removeFromCart(id)}
               src={assets.remove_icon_red}
-              alt="Remove Item"
+              alt="Remove"
+              onClick={() => removeFromCart(id)}
             />
             <p>{itemCount}</p>
             <img
-              onClick={() => addToCart({ id, name, price, description, image })}
               src={assets.add_icon_green}
-              alt="Add Item"
+              alt="Add More"
+              onClick={() => addToCart({ id, name, price, description, image })}
             />
           </div>
         )}

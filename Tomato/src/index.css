@@ -236,6 +236,18 @@
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
+  transition: box-shadow 0.3s ease, transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+  border-radius: 16px;
+  padding-top: 10px;
+  background-color: rgba(255,255,255,0.4);
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.food-display:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.12);
+  background-color: rgba(255,255,255,0.75);
+  border-color: rgba(0,0,0,0.12);
 }
 
 
@@ -265,6 +277,7 @@
 .food-list-image{
   width: 100%;
   border-radius: 15px 15px 0px 0px;
+  transition: transform 0.25s ease, filter 0.25s ease;
 }
 .food-list-info{
   padding: 20px;
@@ -294,6 +307,13 @@
 }
 .food-list-image-container{
   position: relative;
+  overflow: hidden;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.food-list:hover .food-list-image{
+  transform: scale(1.06);
+  filter: brightness(1.03) saturate(1.02);
 }
 .food-item-img-container .add{
   width: 35px;

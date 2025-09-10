@@ -1,13 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Header from '../Components/Header'
 import FoodDisplay from '../Components/FoodDisplay'
+import Menu from '../Components/Menu'
 
 
 const Home = () => {
+
+  const [menuList, setMenuList] = useState([]);
+
   return (
     <div>
       <Header/>
-      <FoodDisplay/> 
+      <Menu menulist={menuList} setMenuList={setMenuList}/>
+      <FoodDisplay menuList={menuList}/> 
     </div>
   )
 }

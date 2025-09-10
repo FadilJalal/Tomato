@@ -1,9 +1,9 @@
-import React, { useContext } from 'react';
-import { StoreContext } from '../Context/StoreContext';
+import React from 'react';
+import useStore from '../store/useStore';
 import FoodList from './FoodList';
 
 const FoodDisplay = () => {
-    const { food_list } = useContext(StoreContext);
+    const { food_list } = useStore();
 
     return (
         <div className='food-display' id='food-display'>
