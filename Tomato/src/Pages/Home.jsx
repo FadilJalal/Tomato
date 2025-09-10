@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Header from '../Components/Header'
-import FoodDisplay from '../Components/FoodDisplay'
 import Menu from '../Components/Menu'
+import FoodDisplay from '../Components/FoodDisplay';
 
 
 const Home = () => {
@@ -12,9 +12,9 @@ const Home = () => {
     <div>
       <Header/>
       <Menu menulist={menuList} setMenuList={setMenuList}/>
-      <FoodDisplay menuList={menuList}/> 
+      <FoodDisplay menuList={menuList}/>
     </div>
   )
 }
 
-export default Home
+export default Home;
