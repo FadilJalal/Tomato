@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { FoodContext } from '../Context/FoodContext';
 import FoodItem from './FoodItem';
 
-const FoodDisplay = () => {
+const FoodDisplay = ({menuList}) => {
     const { food_list } = useContext(FoodContext);
 
     return (
@@ -10,7 +10,10 @@ const FoodDisplay = () => {
             <h2>Top Dishes Near You</h2>
             <div className='food-display-list'>
                 {food_list.map((item,index)=> {
-                    return <FoodItem key={index} id={item._id} name={item.name} price={item.price} description={item.description} image={item.image}/>
+                    if (menuList === "All" || menuList === item.category || !menuList) { 
+                        return <FoodItem key={index} id={item._id} name={item.name} price={item.price} description={item.description} image={item.image}/>
+                    }
+                    return null;
                 })}
             </div> 
         </div>
