@@ -1,19 +1,24 @@
 import React from 'react';
 import NavBar from './Components/NavBar';
+import Footer from './Components/Footer'; // fixed import
 import { Routes, Route } from 'react-router-dom';
 import Home from './Pages/Home';
 import PlaceOrder from './Pages/PlaceOrder';
+import Cart from './Pages/Cart'; // assuming you have a Cart component
 
 const App = () => {
   return (
-    <div className="app">
-      <NavBar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path='/cart' element={<cart/>}/>
-        <Route path="/Order" element={<PlaceOrder/>} />
-      </Routes>
-    </div>
+    <>
+      <div className="app">
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/order" element={<PlaceOrder />} />
+        </Routes>
+      </div>
+      <Footer />
+    </>
   );
 };
 

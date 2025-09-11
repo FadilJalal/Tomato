@@ -329,7 +329,7 @@
     height: 36px;
     position: absolute;
     bottom: 14px;
-    right   : 14px;
+    right: 14px;
     cursor: pointer;
     border-radius: 50%;
     background: #00000070;
@@ -348,7 +348,8 @@
     border-radius: 50px;
     background-color: white;
 }
-.food-item-counter{
+
+.food-item-counter {
     position: absolute;
     bottom: 15px;
     right: 15px;
@@ -358,4 +359,115 @@
     padding: 6px;
     border-radius: 50px;
     background-color: white;
+}
+
+.footer {
+    color: #d9d9d9;
+    background-color: #323232;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 80px 8vw;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
+    gap: 40px;
+}
+
+.footer-content-left,
+.footer-content-center,
+.footer-content-right {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 200px;
+}
+
+.footer-content-left img {
+    width: 150px;
+    object-fit: contain;
+}
+
+.footer-content-left p {
+    font-size: 0.9rem;
+    color: #d9d9d9;
+    line-height: 1.4;
+}
+
+/* Center and Right Sections */
+.footer-content-center h2,
+.footer-content-right h2 {
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.footer-content-center ul,
+.footer-content-right ul {
+    list-style: none;
+}
+
+.footer-content-center ul li,
+.footer-content-right ul li {
+    color: #d9d9d9;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.footer-content-center ul li:hover,
+.footer-content-right ul li:hover {
+    color: tomato;
+}
+
+/* Social Icons */
+.footer-social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-social-icons img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.footer-social-icons img:hover {
+    transform: scale(1.1);
+}
+
+/* Footer Bottom Text */
+.footer p {
+    text-align: center;
+    margin-top: 20px;
+    color: #d9d9d9;
+    font-size: 0.9rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-content-left,
+    .footer-content-center,
+    .footer-content-right {
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-content-center ul li,
+    .footer-content-right ul li {
+        display: inline-block;
+        margin: 0 10px;
+    }
 }
