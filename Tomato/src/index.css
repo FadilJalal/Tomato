@@ -1,10 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Outfit', sans-serif;
+    font-family:outfit;
 }
 
 .app {
@@ -361,13 +360,15 @@
     background-color: white;
 }
 
+/* --- Footer Adjustments --- */
 .footer {
     color: #d9d9d9;
     background-color: #323232;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 40px;
+    /* increased gap for neat spacing */
     padding: 80px 8vw;
 }
 
@@ -386,7 +387,8 @@
 .footer-content-right {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
+    /* slightly bigger gap inside sections */
     min-width: 200px;
 }
 
@@ -398,10 +400,9 @@
 .footer-content-left p {
     font-size: 0.9rem;
     color: #d9d9d9;
-    line-height: 1.4;
+    line-height: 1.5;
 }
 
-/* Center and Right Sections */
 .footer-content-center h2,
 .footer-content-right h2 {
     font-size: 1.2rem;
@@ -411,6 +412,7 @@
 .footer-content-center ul,
 .footer-content-right ul {
     list-style: none;
+    padding: 0;
 }
 
 .footer-content-center ul li,
@@ -428,12 +430,15 @@
 /* Social Icons */
 .footer-social-icons {
     display: flex;
-    gap: 10px;
+    gap: 15px;
+    /* bigger gap between icons */
+    margin-bottom: 30px;
+    /* creates space between social icons & bottom text */
 }
 
 .footer-social-icons img {
-    width: 32px;
-    height: 32px;
+    width: 36px;
+    height: 36px;
     object-fit: contain;
     cursor: pointer;
     transition: 0.2s;
@@ -446,16 +451,50 @@
 /* Footer Bottom Text */
 .footer p {
     text-align: center;
-    margin-top: 20px;
     color: #d9d9d9;
     font-size: 0.9rem;
+    line-height: 1.5;
 }
 
-/* Responsive Adjustments */
+/* --- Gap between Footer and App Download --- */
+.app-download {
+    margin: 80px auto 0 auto;
+    /* top margin to separate from footer */
+    font-size: max(2.5vw, 18px);
+    text-align: center;
+    padding: 0 20px;
+}
+
+.app-download p {
+    font-weight: 500;
+    line-height: 1.5;
+    color: #333;
+}
+
+.app-download-platforms {
+    display: flex;
+    justify-content: center;
+    gap: max(2vw, 15px);
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.app-download-platforms img {
+    width: clamp(120px, 25vw, 180px);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.app-download-platforms img:hover {
+    transform: scale(1.05);
+}
+
+/* --- Responsive Adjustments --- */
 @media (max-width: 768px) {
     .footer-content {
         flex-direction: column;
         align-items: center;
+        gap: 30px;
     }
 
     .footer-content-left,
@@ -469,5 +508,30 @@
     .footer-content-right ul li {
         display: inline-block;
         margin: 0 10px;
+    }
+
+    .app-download {
+        font-size: 4vw;
+        margin-top: 60px;
+    }
+
+    .app-download-platforms {
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .app-download {
+        font-size: 16px;
+        margin-top: 50px;
+    }
+
+    .app-download-platforms {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .app-download-platforms img {
+        width: 150px;
     }
 }
