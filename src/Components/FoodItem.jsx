@@ -1,10 +1,9 @@
-import React, { useContext } from 'react'
+import React, { useContext } from 'react';
 import { assets } from '../assets/frontend_assets/assets';
 import { FoodContext } from '../Context/FoodContext';
 
 const FoodItem = ({ id, name, price, description, image, restaurant }) => {
-
-  const { cartItems, addToCartToCart, removeFromCart } = useContext(FoodContext);
+  const { cartItems, addToCart, removeFromCart } = useContext(FoodContext);
 
   return (
     <div className='food-item'>
@@ -14,10 +13,10 @@ const FoodItem = ({ id, name, price, description, image, restaurant }) => {
           !cartItems[id]
             ? <img className='add' src={assets.add_icon_white} alt='add' onClick={() => addToCart(id)} />
             : <div className='food-item-counter'>
-              <img src={assets.remove_icon_red} alt='remove' onClick={() => removeFromCart(id)} />
-              <p>{cartItems[id]}</p>
-              <img src={assets.add_icon_green} alt='add' onClick={() => addToCart(id)} />
-            </div>
+                <img src={assets.remove_icon_red} alt='remove' onClick={() => removeFromCart(id)} />
+                <p>{cartItems[id]}</p>
+                <img src={assets.add_icon_green} alt='add' onClick={() => addToCart(id)} />
+              </div>
         }
       </div>
       <div className='food-item-info'>
@@ -30,7 +29,7 @@ const FoodItem = ({ id, name, price, description, image, restaurant }) => {
         <p className="food-item-price">$ {price}</p>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default FoodItem;
