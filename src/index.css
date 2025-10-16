@@ -568,3 +568,240 @@
         width: 150px;
     }
 }
+
+/* --- LAPTOP/MEDIUM SCREEN (Max-width: 900px) --- */
+@media (max-width: 900px) {
+
+    /* App Container */
+    .app {
+        width: 95%;
+        /* Make the app slightly wider on smaller screens */
+    }
+
+    /* Navbar */
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .navbar h1 {
+        font-size: 32px;
+    }
+
+    .navbar-menu {
+        display: none;
+        /* Hide the main menu on smaller screens to save space */
+    }
+
+    .navbar button {
+        padding: 6px 20px;
+        font-size: 13px;
+    }
+
+    .navbar-right {
+        gap: 20px;
+    }
+
+    .navbar-search-icon img {
+        width: 25px;
+    }
+
+    /* Header */
+    .header {
+        height: 40vw;
+        /* Increase header height a bit */
+    }
+
+    .header-contents {
+        max-width: 80%;
+    }
+
+    .header-contents h2 {
+        font-size: max(5vw, 24px);
+    }
+
+    .header-contents p {
+        display: none;
+        /* Hide the long paragraph for less clutter */
+    }
+
+    .header-contents button {
+        padding: 8px 20px;
+        font-size: max(1.5vw, 14px);
+    }
+
+    /* Menu */
+    .menu h1 {
+        font-size: max(4vw, 24px);
+    }
+
+    .menu-text {
+        max-width: 90%;
+        font-size: 15px;
+    }
+
+    .menu-list-item img {
+        width: 10vw;
+        min-width: 70px;
+        /* Adjust min width */
+    }
+
+    .menu-list-item p {
+        font-size: 13px;
+    }
+
+    /* Food Display */
+    .food-display {
+        padding: 0 10px;
+    }
+
+    /* Reduce the minmax size for food items to fit more columns */
+    .food-display-list {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 30px 20px;
+    }
+
+    .food-item-info {
+        padding: 15px;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 60px 5vw;
+    }
+}
+
+/* --- MOBILE/SMALL SCREEN (Max-width: 600px) --- */
+@media (max-width: 600px) {
+
+    /* App Container */
+    .app {
+        padding: 10px;
+    }
+
+    /* Navbar */
+    .navbar h1 {
+        font-size: 24px;
+    }
+
+    .navbar .logo {
+        width: 100px;
+    }
+
+    .navbar button {
+        display: none;
+        /* Hide the order button on the smallest screens */
+    }
+
+    .navbar-right {
+        gap: 15px;
+    }
+
+    .navbar-search-icon img {
+        width: 20px;
+    }
+
+    .navbar-search-icon .dot {
+        width: 8px;
+        height: 8px;
+        top: -3px;
+        right: -3px;
+    }
+
+    /* Header */
+    .header {
+        height: 50vw;
+        /* Even taller header for mobile viewing */
+        margin: 15px auto;
+    }
+
+    .header-contents {
+        gap: 10px;
+        bottom: 5%;
+        left: 5vw;
+        max-width: 90%;
+    }
+
+    .header-contents h2 {
+        font-size: 7vw;
+        margin-bottom: 5px;
+    }
+
+    .header-contents button {
+        padding: 6px 15px;
+        font-size: 14px;
+    }
+
+    /* Menu */
+    .menu {
+        padding: 20px 10px;
+        gap: 15px;
+    }
+
+    .menu h1 {
+        text-align: center;
+        /* Center menu title on mobile */
+        font-size: 20px;
+        margin-bottom: 0;
+    }
+
+    .menu-text {
+        max-width: 100%;
+        text-align: center;
+        /* Center menu text on mobile */
+        font-size: 14px;
+    }
+
+    .menu-list {
+        justify-content: space-between;
+        /* Better spacing for scrolling items */
+        gap: 20px;
+    }
+
+    .menu-list-item img {
+        width: 15vw;
+        min-width: 60px;
+    }
+
+    .menu-list-item p {
+        font-size: 12px;
+    }
+
+    /* Food Display */
+    .food-display h2 {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    /* Set food display to a single column or two small ones */
+    .food-display-list {
+        grid-template-columns: 1fr;
+        /* Single column */
+        gap: 25px;
+    }
+
+    .food-item-name-rating p {
+        font-size: 18px;
+    }
+
+    .food-item-price {
+        font-size: 20px;
+    }
+
+    /* App Download */
+    .app-download {
+        margin-top: 40px;
+        font-size: 16px;
+    }
+
+    /* Footer - Already covered by the existing 768px and 480px queries, but adding a check for alignment */
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .footer-section {
+        align-items: center;
+        text-align: center;
+    }
+}

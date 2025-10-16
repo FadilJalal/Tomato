@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { assets } from '../assets/frontend_assets/assets'
 import { Search, ShoppingCart } from 'lucide-react'
+import {Link} from 'react-router-dom'
 
 
 const MenuItems = [
@@ -10,7 +11,8 @@ const MenuItems = [
     { name: "Contact Us" },
 ]
 
-const NavBar = () => {
+const NavBar = ({showLogin,setShowLogin}) => {
+    
     const [underline, setUnderLine] = useState("Home");
 
     return (
