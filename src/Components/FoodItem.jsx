@@ -1,8 +1,8 @@
-import React, { useContext} from 'react'
+import React, { useContext } from 'react'
 import { assets } from '../assets/frontend_assets/assets';
 import { FoodContext } from '../Context/FoodContext';
 
-const FoodItem = ({ id, name, price, description, image }) => {
+const FoodItem = ({ id, name, price, description, image, restaurant }) => {
 
   const { cartItems, addToCart, removeFromCart } = useContext(FoodContext);
 
@@ -25,6 +25,7 @@ const FoodItem = ({ id, name, price, description, image }) => {
           <p>{name}</p>
           <img src={assets.rating_starts} alt='rating' />
         </div>
+        <p className="food-item-restaurant"><strong>Restaurant:</strong> {restaurant}</p>
         <p className="food-item-desc">{description}</p>
         <p className="food-item-price">$ {price}</p>
       </div>

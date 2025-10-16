@@ -272,7 +272,8 @@
 
 .food-display-list {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 columns exactly */
+    grid-template-columns: repeat(4, 1fr);
+    /* 4 columns exactly */
     gap: 40px 30px;
     justify-items: center;
 }
@@ -287,6 +288,15 @@
     transition: 0.3s;
     animation: fadeIn 1s;
 }
+
+.food-item-restaurant {
+    font-size: 14px;
+    color: #444;
+    margin-top: 5px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
 
 .food-item-image {
     width: 100%;
@@ -317,6 +327,7 @@
 .food-item-desc {
     color: #676767;
     font-size: 12px;
+    margin-bottom: 8px;
 }
 
 .food-item-price {
