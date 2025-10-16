@@ -4,7 +4,7 @@ import { FoodContext } from '../Context/FoodContext';
 
 const FoodItem = ({ id, name, price, description, image, restaurant }) => {
 
-  const { cartItems, addToCart, removeFromCart } = useContext(FoodContext);
+  const { cartItems, addToCartToCart, removeFromCart } = useContext(FoodContext);
 
   return (
     <div className='food-item'>

@@ -4,7 +4,7 @@ import Menu from "../Components/Menu";
 import FoodDisplay from "../Components/FoodDisplay";
 
 const Home = () => {
-  const [menulist, setMenuList] = useState("All"); 
+  const [menulist, setMenuList] = useState([]); 
 
   return (
     <div>
