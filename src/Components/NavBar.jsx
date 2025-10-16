@@ -15,7 +15,7 @@ const NavBar = () => {
 
     return (
         <div className='navbar'>
-            <img src={assets.logo} alt="logo" className='logo' />
+            <h1>ZapEats</h1>
             <ul className="navbar-menu">
                 {MenuItems.map((item, index) => (
                     <li 

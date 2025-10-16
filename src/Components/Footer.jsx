@@ -1,5 +1,8 @@
 import React from 'react';
 import { assets } from '../assets/frontend_assets/assets';
+import { Facebook } from 'lucide-react';
+import { Twitter } from 'lucide-react';
+import { Linkedin } from 'lucide-react';;
 
 const Footer = () => {
   return (
@@ -7,19 +10,19 @@ const Footer = () => {
       <div className="footer-content">
         {/* Left Section */}
         <div className="footer-section footer-left">
-          <img src={assets.logo} alt="Tomato Logo" className="footer-logo" />
+          <h1>ZapEats</h1>
           <p>
             Delivering delicious meals from your favorite restaurants straight to your doorstep, fast and fresh every time.
           </p>
           <div className="footer-social-icons">
             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-              <img src={assets.facebook_icon} alt="Facebook" />
+              <Facebook size={24} color="white" />
             </a>
             <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-              <img src={assets.twitter_icon} alt="Twitter" />
+              <Twitter size={24} color="white" />
             </a>
             <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-              <img src={assets.linkedin_icon} alt="LinkedIn" />
+              <Linkedin size={24} color="white" />
             </a>
           </div>
         </div>
@@ -47,7 +50,7 @@ const Footer = () => {
 
       <hr className="footer-divider" />
       <p className="footer-bottom-text">
-        &copy; 2024 Tomato.com - All Rights Reserved
+        &copy; 2025 ZapEats.com - All Rights Reserved
       </p>
     </footer>
   );

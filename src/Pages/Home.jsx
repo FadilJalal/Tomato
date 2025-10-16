@@ -1,20 +1,18 @@
-import React, { useState } from 'react'
-import Header from '../Components/Header'
-import Menu from '../Components/Menu'
-import FoodDisplay from '../Components/FoodDisplay';
-
+import { useState } from "react"; 
+import Header from "../Components/Header";
+import Menu from "../Components/Menu";
+import FoodDisplay from "../Components/FoodDisplay";
 
 const Home = () => {
-
-  const [menuList, setMenuList] = useState("All");
+  const [menulist, setMenuList] = useState("All"); 
 
   return (
     <div>
-      <Header/>
-      <Menu menulist={menuList} setMenuList={setMenuList}/>
-      <FoodDisplay menuList={menuList}/>
+      <Header />
+      <Menu menulist={menulist} setMenuList={setMenuList} />
+      <FoodDisplay menuList={menulist} />
     </div>
-  )
-}
+  );
+};
 
 export default Home;
